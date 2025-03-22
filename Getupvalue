@@ -1,6 +1,6 @@
-local getupval = debug.getupvalue or getupvalue or function(...)
-		print("getupvalue function is not supported!")
-		return ...
-end
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Fsys = require(ReplicatedStorage:FindFirstChild("Fsys"))
 
-return getupval
+for index, value in getupvalue(Fsys.load("RouterClient").init, 7) do
+    value.Name = index
+end

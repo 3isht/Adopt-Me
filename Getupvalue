@@ -1,0 +1,4 @@
+local getupval = debug.getupvalue or getupvalue or function(...)
+		print("getupvalue function is not supported!")
+		return ...
+end
